@@ -1,10 +1,10 @@
 const path = require('path');
 
 module.exports = {
-  entry: './assets/js/ES6/aw-main.js',
+  entry: './assets/js/ES6/main.js',
   output: {
     path: path.resolve(__dirname, 'assets/js/dist'),
-    filename: 'adw-bundle.js'
+    filename: 'bundle.js'
   },
 };
 

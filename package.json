@@ -15,7 +15,7 @@
   "scripts": {
     "build": "webpack --prod",
     "dev": "webpack --watch",
-    "styles": "sass assets/sass/aw-main.scss assets/sass/css/aw-main.css",
+    "styles": "sass assets/sass/main.scss assets/sass/css/main.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

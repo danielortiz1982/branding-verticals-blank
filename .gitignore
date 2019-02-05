@@ -1,4 +1,5 @@
 .DS_Store
+/node_modules
 *.log
 wp-config.php
 wp-content/advanced-cache.php
