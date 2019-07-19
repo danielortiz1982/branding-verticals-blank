@@ -6,6 +6,7 @@
   "dependencies": {
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
+    "express": "^4.17.1",
     "sass": "^1.16.1",
     "scss": "^0.2.4",
     "webpack": "^4.29.0",
@@ -15,17 +16,17 @@
   "scripts": {
     "build": "webpack --prod",
     "dev": "webpack --watch",
-    "styles": "sass assets/sass/main.scss assets/sass/css/main.css",
+    "styles": "sass assets/sass/main.sass assets/sass/css/main.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://dortiz1982@bitbucket.org/adweekdevelopment/adweek_wp_blank.git"
+    "url": "https://github.com/danielortiz1982/branding-verticals-blank"
   },
   "keywords": [
     "bv"
   ],
   "author": "dortiz",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/adweekdevelopment/adweek_wp_blank/src/master/README.md"
+  "homepage": "https://github.com/danielortiz1982/branding-verticals-blank/blob/master/README.md"
 }
