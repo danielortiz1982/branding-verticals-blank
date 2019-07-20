@@ -108,6 +108,14 @@ a:hover {
   background-color: transparent;
 }
 
+.news-section-list {
+  border-bottom: 1px #ccc solid;
+  padding: 1.2em 0;
+}
+.news-section-list:last-child {
+  border: 0;
+}
+
 .footer {
   width: 100%;
   margin: 0 auto;
