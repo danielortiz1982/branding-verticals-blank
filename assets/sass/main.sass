@@ -1,2 +1,98 @@
 body
     background-color: whitesmoke
+
+h1, h2, h3, h4, h5, h6
+    color: #000000
+
+a
+    color: orange
+    transition: 1s
+
+    &:hover
+        transition: 1s
+        color: #000000
+
+.site-header
+    margin: 0 auto
+
+    .header-logo
+        display: none
+        
+        @media screen and (min-width: 768px)
+            display: block
+
+.navigation-box
+    margin: 0 auto
+    padding: 0 0 1em 0
+
+    .header-logo
+        display: block
+
+        @media screen and (min-width: 768px)
+            display: none
+
+.header-logo
+    width: 225px
+    margin: 0
+    padding: 1em 0
+
+    @media screen and (min-width: 768px)
+        width: 300px
+
+.header-title
+    display: none
+
+.header-description
+    display: none
+    
+.navigation-box
+    .header-nav
+        background-color: whitesmoke
+
+        @media screen and (min-width: 768px)
+            background-color: #000000
+
+        #header-navigation
+            text-transform: uppercase
+            background-color: #000000
+            padding: 0 .5em
+
+            @media screen and (min-width: 768px)
+                padding: 0
+
+        a 
+            color: #ffffff
+            transition: 1s
+
+            &:hover
+                transition: 1s
+                color: orange
+
+.dropdown-menu
+    background-color: #000000
+
+.navbar-toggler
+    background-color: #F5F5F5
+    border: 1px solid #ccc
+
+.the-title
+    text-transform: uppercase
+    font-weight: bold
+
+.post-thumbnail
+    width: 100%
+    display: block
+    margin: 0 auto
+    padding: 1em 0
+    background-color: transparent
+
+
+
+
+
+.footer
+    width: 100%
+    margin: 0 auto
+    padding: 1em 0
+    display: block
+    text-align: center

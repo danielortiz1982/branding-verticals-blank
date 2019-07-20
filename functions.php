@@ -73,3 +73,5 @@ function update_edit_form() {
     echo ' enctype="multipart/form-data"';
 }
 // end of update_edit_form
+
+require_once get_template_directory() . '/includes/wp-bootstrap-navwalker.php';
