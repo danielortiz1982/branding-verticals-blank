@@ -14,13 +14,33 @@
         <div class="wrapper">
             <header class="site-header">
                 <div class="container">
-                    <h1><a href="<?php echo home_url(); ?>"><?php echo get_bloginfo('name'); ?></a></h1>
-                    <h2><?php echo get_bloginfo('description'); ?></h2>
-                    <hr />
+                    <div class="header-logo"><a href="/wp-sandbox"><img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/bv-logo.png"></a></div>
+                    <h1 class="header-title"><a href="<?php echo home_url(); ?>"><?php echo get_bloginfo('name'); ?></a></h1>
+                    <h2 class="header-description"><?php echo get_bloginfo('description'); ?></h2>
                 </div>
             </header>
             <div class="navigation-box">
                 <nav class="container">
-                    <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'header-menu' ) ); ?>
+                    <nav class="navbar navbar-expand-md header-nav" role="navigation">
+                        <div class="container">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#header-navigation" aria-controls="header-navigation" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                            <div class="navbar-brand header-logo"><a href="/wp-sandbox"><img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/bv-logo.png"></a></div>
+                            <?php
+                                wp_nav_menu( array(
+                                    'theme_location'    => 'primary',
+                                    'depth'             => 2,
+                                    'container'         => 'div',
+                                    'container_class'   => 'collapse navbar-collapse',
+                                    'container_id'      => 'header-navigation',
+                                    'menu_class'        => 'nav navbar-nav',
+                                    'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+                                    'walker'            => new WP_Bootstrap_Navwalker(),
+                                ) );
+                            ?>
+                        </div>
+                    </nav>
                 </nav>
             </div>

@@ -1,3 +1,4 @@
+<?php /* Template Name: full */ ?>
 <?php get_header(); ?>
 <main class="site-content">
 	<div class="container">
