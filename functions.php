@@ -75,3 +75,4 @@ function update_edit_form() {
 // end of update_edit_form
 
 require_once get_template_directory() . '/includes/wp-bootstrap-navwalker.php';
+require_once get_template_directory() . '/includes/theme-slider.php';
