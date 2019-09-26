@@ -21,7 +21,7 @@
             </header>
             <div class="navigation-box">
                 <nav class="container">
-                    <nav class="navbar navbar-expand-md header-nav" role="navigation">
+                    <nav class="navbar navbar-expand-md header-nav" role="navigation" style="background-color: <?php echo esc_attr( get_option('nav_color_opt') ); ?>">
                         <div class="container">
                         <!-- Brand and toggle get grouped for better mobile display -->
                         <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#header-navigation" aria-controls="header-navigation" aria-expanded="false" aria-label="Toggle navigation">

@@ -21,7 +21,7 @@ function branding_verticals_wp_blank(){
 		'link',
 		));
 	add_theme_support('custom-background', array(
-		'default-color' => 'ffffff',
+		'default-color' => 'f1f1f1',
 		'default-image' => '',
 		));
 
@@ -53,6 +53,8 @@ function bv_blank_scripts(){
 	wp_enqueue_style( 'font-awesome-style', get_template_directory_uri() . '/assets/libs/css/fontawesome-5.7.0/css/all.min.css' );
 	wp_enqueue_style( 'bv-main-style', get_template_directory_uri() . '/assets/sass/css/main.css' );
 
+
+
 	// JavaScript  
 	wp_enqueue_script('bv-jquery-js', get_template_directory_uri() . '/assets/libs/js/jquery/jquery-3.3.1.slim.min.js', array(), false, true);
 	wp_enqueue_script('bv-popper-js', get_template_directory_uri() . '/assets/libs/js/popper/popper.min.js', array(), false, true);
@@ -65,6 +67,7 @@ function bv_blank_scripts(){
 
 add_action('admin_enqueue_scripts', 'admin_style');
 function admin_style() {
+	wp_enqueue_style( 'bv-admin-style', get_template_directory_uri() . '/assets/sass/admin-styles.css' );
 }
 // end of admin_style
 
@@ -76,3 +79,5 @@ function update_edit_form() {
 
 require_once get_template_directory() . '/includes/wp-bootstrap-navwalker.php';
 require_once get_template_directory() . '/includes/theme-slider.php';
+require_once get_template_directory() . '/includes/bv-theme-options.php';
+

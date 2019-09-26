@@ -1,0 +1,23 @@
+.theme-opt-wrapper{
+	width: 85%;
+	margin: 0 auto;
+	padding: 20px;
+	background: #ffffff;
+}
+label{
+	display: block;
+	font-weight: bold;
+	padding: 5px 0;
+	font-size: 18px;
+}
+
+h2{
+	font-size: 22px;
+	margin: 20px 0;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+p{
+	margin: 0
+}
