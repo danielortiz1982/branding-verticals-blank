@@ -4,6 +4,27 @@
 	padding: 20px;
 	background: #ffffff;
 }
+.form-box{
+	display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    gap: 1em;
+}
+.form-component{
+	padding: 0 20px;
+}
+.theme-opt-logo{
+	width: 325px;
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+.theme-opt-logo img{
+	width: 100%;
+	height: auto;
+	display: block;
+	margin: 0;
+	padding: 0;
+}
 label{
 	display: block;
 	font-weight: bold;
@@ -11,13 +32,21 @@ label{
 	font-size: 18px;
 }
 
+h1{
+	font-size: 36px;
+	padding: 0 15px;
+}
+
 h2{
 	font-size: 22px;
 	margin: 20px 0;
+	padding: 20px;
 	text-decoration: underline;
 	font-weight: bold;
+	background-color: whitesmoke; 
 }
 
 p{
 	margin: 0
+	padding: 0 5px;
 }

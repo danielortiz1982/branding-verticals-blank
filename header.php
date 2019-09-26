@@ -8,6 +8,21 @@
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
         <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
         <?php wp_head(); ?>
+
+        <style type="text/css">
+            h1, h2, h3, h4, h5, h6{
+                color: <?php echo esc_attr( get_option('header_color_opt') ); ?>
+            }
+            a{
+                color: <?php echo esc_attr( get_option('anchor_color_opt') ); ?>
+            }
+            .dropdown-menu{
+                background-color: <?php echo esc_attr( get_option('nav_color_opt') ); ?>
+            }
+            .navigation-box .header-nav a{
+               color: <?php echo esc_attr( get_option('nav_txt_color_opt') ); ?>
+            }
+        </style>
     </head>
 
     <body <?php body_class(); ?>>
