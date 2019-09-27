@@ -6,11 +6,13 @@
 }
 .form-box{
 	display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: center;
     gap: 1em;
+    padding: 5px 0;
 }
 .form-component{
-	padding: 0 20px;
+	padding: 5px 20px;
 }
 .theme-opt-logo{
 	width: 325px;
@@ -29,6 +31,7 @@ label{
 	display: block;
 	font-weight: bold;
 	padding: 5px 0;
+	text-transform: capitalize;
 	font-size: 18px;
 }
 
@@ -42,6 +45,7 @@ h2{
 	margin: 20px 0;
 	padding: 20px;
 	text-decoration: underline;
+	text-transform: capitalize;
 	font-weight: bold;
 	background-color: whitesmoke; 
 }

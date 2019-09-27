@@ -10,18 +10,29 @@
         <?php wp_head(); ?>
 
         <style type="text/css">
+ 
             h1, h2, h3, h4, h5, h6{
-                color: <?php echo esc_attr( get_option('header_color_opt') ); ?>
+                color: <?php echo esc_attr( get_option('header_color_opt') ); ?>;
+            }
+            h1{
+                font-size: <?php echo esc_attr( get_option('header_size_opt') ); ?>px;
+            }
+            h2{
+                font-size: <?php echo esc_attr( get_option('subheader_size_opt') ); ?>px;
+            }
+            p{
+                font-size: <?php echo esc_attr( get_option('body__txt_size_opt') ); ?>px;
             }
             a{
-                color: <?php echo esc_attr( get_option('anchor_color_opt') ); ?>
+                color: <?php echo esc_attr( get_option('anchor_color_opt') ); ?>;
             }
             .dropdown-menu{
-                background-color: <?php echo esc_attr( get_option('nav_color_opt') ); ?>
+                background-color: <?php echo esc_attr( get_option('nav_color_opt') ); ?>;
             }
             .navigation-box .header-nav a{
-               color: <?php echo esc_attr( get_option('nav_txt_color_opt') ); ?>
+               color: <?php echo esc_attr( get_option('nav_txt_color_opt') ); ?>;
             }
+
         </style>
     </head>
 
