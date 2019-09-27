@@ -10,6 +10,9 @@
         <?php wp_head(); ?>
 
         <style type="text/css">
+
+            
+
  
             h1, h2, h3, h4, h5, h6{
                 color: <?php echo esc_attr( get_option('header_color_opt') ); ?>;
@@ -32,6 +35,21 @@
             .navigation-box .header-nav a{
                color: <?php echo esc_attr( get_option('nav_txt_color_opt') ); ?>;
             }
+            #header-navigation{
+                background-color: <?php echo esc_attr( get_option('nav_color_opt') ); ?>;
+            }
+            .header-nav{
+                background-color: transparent;
+            }
+
+            @media screen and (min-width: 768px) {
+                .header-nav{
+                    background-color: <?php echo esc_attr( get_option('nav_color_opt') ); ?>;
+                    
+                }
+            }
+
+
 
         </style>
     </head>
@@ -47,7 +65,7 @@
             </header>
             <div class="navigation-box">
                 <nav class="container">
-                    <nav class="navbar navbar-expand-md header-nav" role="navigation" style="background-color: <?php echo esc_attr( get_option('nav_color_opt') ); ?>">
+                    <nav class="navbar navbar-expand-md header-nav" role="navigation">
                         <div class="container">
                         <!-- Brand and toggle get grouped for better mobile display -->
                         <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#header-navigation" aria-controls="header-navigation" aria-expanded="false" aria-label="Toggle navigation">
