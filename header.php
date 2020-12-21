@@ -10,9 +10,6 @@
         <?php wp_head(); ?>
 
         <style type="text/css">
-
-            
-
  
             h1, h2, h3, h4, h5, h6{
                 color: <?php echo esc_attr( get_option('header_color_opt') ); ?>;
@@ -49,42 +46,26 @@
                 }
             }
 
-
-
         </style>
     </head>
 
     <body <?php body_class(); ?>>
         <div class="wrapper">
             <header class="site-header">
-                <div class="container">
-                    <div class="header-logo"><a href="/wp-sandbox"><img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/bv-logo.png"></a></div>
-                    <h1 class="header-title"><a href="<?php echo home_url(); ?>"><?php echo get_bloginfo('name'); ?></a></h1>
-                    <h2 class="header-description"><?php echo get_bloginfo('description'); ?></h2>
-                </div>
-            </header>
-            <div class="navigation-box">
-                <nav class="container">
-                    <nav class="navbar navbar-expand-md header-nav" role="navigation">
-                        <div class="container">
-                        <!-- Brand and toggle get grouped for better mobile display -->
-                        <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#header-navigation" aria-controls="header-navigation" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                            <div class="navbar-brand header-logo"><a href="/wp-sandbox"><img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/bv-logo.png"></a></div>
-                            <?php
-                                wp_nav_menu( array(
-                                    'theme_location'    => 'primary',
-                                    'depth'             => 2,
-                                    'container'         => 'div',
-                                    'container_class'   => 'collapse navbar-collapse',
-                                    'container_id'      => 'header-navigation',
-                                    'menu_class'        => 'nav navbar-nav',
-                                    'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-                                    'walker'            => new WP_Bootstrap_Navwalker(),
-                                ) );
-                            ?>
+                <section class="container">
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="header-logo">
+                                <div class="logo"><a href="/wp-sandbox"><img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/bv-logo.png"></a></div>
+                            </div>
                         </div>
-                    </nav>
-                </nav>
-            </div>
+
+                        <div class="col-9">
+                            <div class="header-navbar">
+                                <?php wp_nav_menu( array( 'bv_blank_menu' => 'header-menu' ) ); ?>
+                                <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </header>
