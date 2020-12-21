@@ -28,6 +28,7 @@ function branding_verticals_wp_blank(){
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', 'bv_blank_menu' ),
 		'footer' => esc_html__( 'Footer', 'bv_blank_menu' ),
+		'mobile' => esc_html__( 'Mobile', 'bv_blank_mobile_menu' ),
 		));
 }
 // end of branding_verticals_wp_blank
@@ -76,7 +77,6 @@ function update_edit_form() {
 }
 // end of update_edit_form
 
-require_once get_template_directory() . '/includes/wp-bootstrap-navwalker.php';
-require_once get_template_directory() . '/includes/theme-slider.php';
+
 require_once get_template_directory() . '/includes/bv-theme-options.php';
 

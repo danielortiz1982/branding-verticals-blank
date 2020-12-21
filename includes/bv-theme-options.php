@@ -4,7 +4,7 @@
 add_action('admin_menu', 'bv_opt_menu');
 
 function bv_opt_menu() {
-	add_menu_page('Branding Verticals Theme Options', 'BV options', 'administrator', __FILE__, 'bv_opt_page'  ); //plugins_url('/images/icon.png', __FILE__)
+	add_menu_page('Branding Verticals Theme Options', 'Theme options', 'administrator', __FILE__, 'bv_opt_page'  ); //plugins_url('/images/icon.png', __FILE__)
 	add_action( 'admin_init', 'register_bv_theme_options' );
 }
 
