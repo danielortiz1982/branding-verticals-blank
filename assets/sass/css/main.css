@@ -4,7 +4,6 @@ html, body {
 
 .wrapper {
   height: 100%;
-  background-color: whitesmoke;
   display: flex;
   flex-direction: column;
 }
@@ -32,6 +31,7 @@ a:hover {
   position: fixed;
   border-bottom: solid 1px #cccccc;
   background-color: whitesmoke;
+  z-index: 999;
 }
 @media screen and (min-width: 800px) {
   .site-header {
@@ -123,6 +123,23 @@ a:hover {
 .header-navbar ul a:hover {
   background-color: orange;
   color: #fff;
+}
+
+.mobile-menu-content {
+  width: 0%;
+  height: 100vh;
+  transition: 1s;
+  display: block;
+  position: absolute;
+  top: 78px;
+  left: 0;
+  background-color: whitesmoke;
+}
+.mobile-menu-content .mobile-menu {
+  width: 100%;
+  transition: 1s;
+  opacity: 0;
+  display: none;
 }
 
 .site-content {

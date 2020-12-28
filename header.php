@@ -67,5 +67,11 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="mobile-menu-content">
+                        <div class="mobile-menu">
+                            <?php wp_nav_menu( array( 'bv_blank_menu' => 'header-menu' ) ); ?>
+                        </div>
+                    </div>
                 </section>
             </header>
