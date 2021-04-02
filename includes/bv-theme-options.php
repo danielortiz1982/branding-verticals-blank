@@ -87,7 +87,7 @@ function bv_opt_page() {
 
 	    <div class="form-box">
 	    	<div class="form-component">
-	    		<object type="image/svg+xml" data="<?php echo get_template_directory_uri(); ?>/assets/svg/facebook.svg">Sorry SVG is not supported</object>
+	    		<i class="fab fa-facebook-square"></i>
 	    		<label for="social_facebook_opt"><input type="checkbox" name="facebook"> facebook</label>
 	    		<input type="text" placeholder="facebook.com/user" name="social_facebook_opt" value="<?php echo esc_attr( get_option('social_facebook_opt') ); ?>" />
 
