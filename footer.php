@@ -1,11 +1,10 @@
-            <footer class="footer">
-                <div class="container">
-                    <hr />
-                	<h6><?php echo date('Y'); ?> &copy; <?php echo "BV Blank All Rights Reserved."; ?></h6>
-                </div>
-            </footer>
+<footer class="footer">
+    <section class="container">
+    	<div class="row">
+    		<h6><?php echo date('Y'); ?> &copy; <?php echo "BV Blank All Rights Reserved."; ?></h6>
     	</div>
-    	<!--end of .wrapper-->
-    	<?php wp_footer(); ?>
-    </body>
+    </section>
+</footer>
+<?php wp_footer(); ?>
+</body>
 </html>
