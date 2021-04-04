@@ -1,6 +1,13 @@
 <?php /* Template Name: Blog Cards */ ?>
 <?php get_header(); ?>
 <main class="main-content">
+    <section class="container-fluid p-0">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="the-content"><?php the_content(); ?></div>
+            </div>
+        </div>
+    </section>
 	<section class="container">
         <section class="row news-section-card">
             <?php $args = array('post_type' => 'post', 'post_status' => 'publish', 'posts_per_page' => -1, 'orderby' => 'title', 'order' => 'ASC'); $the_query = new WP_Query( $args ); ?>

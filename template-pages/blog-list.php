@@ -1,6 +1,13 @@
 <?php /* Template Name: Blog List */ ?>
 <?php get_header(); ?>
 <main class="main-content">
+    <section class="container-fluid p-0">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="the-content"><?php the_content(); ?></div>
+            </div>
+        </div>
+    </section>
 	<section class="container">
         <?php $args = array('post_type' => 'post', 'post_status' => 'publish', 'posts_per_page' => -1, 'orderby' => 'title', 'order' => 'ASC'); $the_query = new WP_Query( $args ); ?>
         <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>

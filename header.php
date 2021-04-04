@@ -8,6 +8,29 @@
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
         <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
         <?php wp_head(); ?>
+        <style type="text/css">
+            h1, h2, h3, h4, h5, h6{
+                color: <?php echo esc_attr( get_option('header_color_opt') ); ?>;
+            }
+            h1{
+                font-size: <?php echo esc_attr( get_option('header_size_opt') ); ?>px;
+            }
+            h2{
+                font-size: <?php echo esc_attr( get_option('subheader_size_opt') ); ?>px;
+            }
+            p{
+                color: <?php echo esc_attr(get_option('body_txt_color_opt')); ?>;
+                font-size: <?php echo esc_attr( get_option('body_txt_size_opt') ); ?>px;
+            }
+            a{
+                color:<?php echo esc_attr(get_option('anchor_color_opt')); ?>;
+                color: <?php echo esc_attr( get_option('anchor_color_opt') ); ?>px;
+            }
+        </style>
+
+        <style type="text/css">
+            <?php echo esc_attr( get_option('custom_css') ); ?>
+        </style>
     </head>
 
     <body <?php body_class(); ?>>
@@ -15,7 +38,7 @@
             <section class="container">
                 <div class="row">
                     <div class="col-md-3">
-                        <div class="header-logo"><a href="<?php echo get_home_url(); ?>"><img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/bv-logo.png"></a></div>
+                        <div class="header-logo"><a href="<?php echo get_home_url(); ?>"><img class="img-fluid" src="<?php echo esc_attr( get_option('header_logo_opt') ); ?>"></a></div>
                     </div>
 
                     <div class="col-md-9">
@@ -34,9 +57,20 @@
                                         ));
                                     ?>
                                 </div>
-                                <form class="d-flex">
-                                    <?php get_search_form(); ?> 
-                              </form>
+                                <div class="social-search">
+                                    <div class="footer-social">
+                                        Follow US 
+                                        <a target="_blank" href="<?php echo esc_attr( get_option('social_facebook_opt') ); ?>"><i class="fab fa-facebook-square"></i></a>
+                                        <a target="_blank" href="<?php echo esc_attr( get_option('social_twitter_opt') ); ?>"><i class="fab fa-twitter-square"></i></a>
+                                        <a target="_blank" href="<?php echo esc_attr( get_option('social_youtube_opt') ); ?>"><i class="fab fa-youtube-square"></i></a>
+                                        <a target="_blank" href="<?php echo esc_attr( get_option('social_instagram_opt') ); ?>"><i class="fab fa-instagram"></i></a>
+                                        <a target="_blank" href="<?php echo esc_attr( get_option('social_linkedin_opt') ); ?>"><i class="fab fa-linkedin"></i></a>
+                                        <a target="_blank" href="<?php echo esc_attr( get_option('social_email_opt') ); ?>"><i class="fas fa-envelope-square"></i></a>
+                                    </div>
+                                    <form class="d-flex">
+                                        <?php get_search_form(); ?> 
+                                    </form>
+                                </div>
                             </div>
                         </nav>
                     </div>
