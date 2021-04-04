@@ -38,7 +38,15 @@
             <section class="container">
                 <div class="row">
                     <div class="col-md-3">
-                        <div class="header-logo"><a href="<?php echo get_home_url(); ?>"><img class="img-fluid" src="<?php echo esc_attr( get_option('header_logo_opt') ); ?>"></a></div>
+                        <div class="header-logo">
+                            <a href="<?php echo get_home_url(); ?>">
+                                <?php if(esc_attr( get_option('header_logo_opt') ) == '') : ?>
+                                    <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/bv-logo.png">
+                                <?php else: ?>
+                                    <img class="img-fluid" src="<?php echo esc_attr( get_option('header_logo_opt') ); ?>">
+                                <?php endif ?>
+                            </a>
+                        </div>
                     </div>
 
                     <div class="col-md-9">
@@ -59,13 +67,29 @@
                                 </div>
                                 <div class="social-search">
                                     <div class="footer-social">
-                                        Follow US 
-                                        <a target="_blank" href="<?php echo esc_attr( get_option('social_facebook_opt') ); ?>"><i class="fab fa-facebook-square"></i></a>
-                                        <a target="_blank" href="<?php echo esc_attr( get_option('social_twitter_opt') ); ?>"><i class="fab fa-twitter-square"></i></a>
-                                        <a target="_blank" href="<?php echo esc_attr( get_option('social_youtube_opt') ); ?>"><i class="fab fa-youtube-square"></i></a>
-                                        <a target="_blank" href="<?php echo esc_attr( get_option('social_instagram_opt') ); ?>"><i class="fab fa-instagram"></i></a>
-                                        <a target="_blank" href="<?php echo esc_attr( get_option('social_linkedin_opt') ); ?>"><i class="fab fa-linkedin"></i></a>
-                                        <a target="_blank" href="<?php echo esc_attr( get_option('social_email_opt') ); ?>"><i class="fas fa-envelope-square"></i></a>
+                                        <?php if(esc_attr( get_option('social_facebook_opt') ) != '') : ?>
+                                            <a target="_blank" href="<?php echo esc_attr( get_option('social_facebook_opt') ); ?>"><i class="fab fa-facebook-square"></i></a>
+                                        <?php endif ?>
+
+                                        <?php if(esc_attr( get_option('social_twitter_opt') ) != '') : ?>
+                                            <a target="_blank" href="<?php echo esc_attr( get_option('social_twitter_opt') ); ?>"><i class="fab fa-twitter-square"></i></a>
+                                        <?php endif ?>
+
+                                        <?php if(esc_attr( get_option('social_youtube_opt') ) != '') : ?>
+                                            <a target="_blank" href="<?php echo esc_attr( get_option('social_youtube_opt') ); ?>"><i class="fab fa-youtube-square"></i></a>
+                                        <?php endif ?>
+
+                                        <?php if(esc_attr( get_option('social_instagram_opt') ) != '') : ?>
+                                            <a target="_blank" href="<?php echo esc_attr( get_option('social_instagram_opt') ); ?>"><i class="fab fa-instagram"></i></a>
+                                        <?php endif ?>
+
+                                        <?php if(esc_attr( get_option('social_linkedin_opt') ) != '') : ?>
+                                            <a target="_blank" href="<?php echo esc_attr( get_option('social_linkedin_opt') ); ?>"><i class="fab fa-linkedin"></i></a>
+                                        <?php endif ?>
+
+                                        <?php if(esc_attr( get_option('social_email_opt') ) != '') : ?>
+                                            <a target="_blank" href="<?php echo esc_attr( get_option('social_email_opt') ); ?>"><i class="fas fa-envelope-square"></i></a>
+                                        <?php endif ?>
                                     </div>
                                     <form class="d-flex">
                                         <?php get_search_form(); ?> 

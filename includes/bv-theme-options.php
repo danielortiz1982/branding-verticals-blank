@@ -30,7 +30,13 @@ function bv_opt_page() {
 ?>
 
 <div class="theme-opt-wrapper">
-	<div class="theme-opt-logo"><img class="img-fluid" src="<?php echo esc_attr( get_option('header_logo_opt') ); ?>"></div>
+	<div class="theme-opt-logo">
+		<?php if(esc_attr( get_option('header_logo_opt') ) == '') : ?>
+	        <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/bv-logo.png">
+	    <?php else: ?>
+	        <img class="img-fluid" src="<?php echo esc_attr( get_option('header_logo_opt') ); ?>">
+	    <?php endif ?>
+	</div>
 	<h1>Theme Options</h1>
 	<hr />
 	<form method="post" action="options.php">
