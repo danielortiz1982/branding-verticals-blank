@@ -1,6 +1,6 @@
 {
   "name": "bv_theme",
-  "version": "1.0.0",
+  "version": "5.0.0",
   "description": "BV App",
   "main": "server.js",
   "dependencies": {
@@ -14,9 +14,9 @@
   },
   "devDependencies": {},
   "scripts": {
-    "build": "webpack --prod",
+    "build": "sass assets/sass/main.sass assets/sass/css/main.css && webpack",
     "dev": "webpack --watch",
-    "styles": "sass assets/sass/main.sass assets/sass/css/main.css",
+    "styles": "sass assets/sass/main.sass assets/sass/css/main.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
