@@ -4,7 +4,7 @@
 add_action('admin_menu', 'bv_opt_menu');
 
 function bv_opt_menu() {
-	add_menu_page('Branding Verticals Theme Options', 'BV options', 'administrator', __FILE__, 'bv_opt_page'  ); //plugins_url('/images/icon.png', __FILE__)
+	add_menu_page('Theme Options', 'Theme options', 'administrator', __FILE__, 'bv_opt_page'  );
 	add_action( 'admin_init', 'register_bv_theme_options' );
 }
 
@@ -23,6 +23,7 @@ function register_bv_theme_options() {
 	register_setting( 'bv-opt-group', 'social_linkedin_opt' );
 	register_setting( 'bv-opt-group', 'social_instagram_opt' );
 	register_setting( 'bv-opt-group', 'social_email_opt' );
+	register_setting('bv-opt-group', 'footer_txt_opt');
 	register_setting('bv-opt-group', 'custom_css');
 }
 
@@ -134,6 +135,15 @@ function bv_opt_page() {
 	    	</div>
 	    </div>
 
+	    <h2>Footer</h2>
+	    
+	    <div class="form-box-container">
+	    	<div class="form-component">
+	    		<label for="footer_txt_opt">Footer</label>
+	    		<input type="text" placeholder="Footer Text" name="footer_txt_opt" value="<?php echo esc_attr( get_option('footer_txt_opt') ); ?>" />
+	    	</div>
+	    </div>
+
 	    <h2>Custom CSS</h2>
 	    
 	    <div class="form-box-container">
@@ -141,6 +151,7 @@ function bv_opt_page() {
 	    		<textarea name="custom_css"><?php echo esc_attr( get_option('custom_css') ); ?></textarea>
 	    	</div>
 	    </div>
+
 	    <div class="form-box">
 	    	<div class="form-component"><?php submit_button(); ?></div>
 	    </div>
