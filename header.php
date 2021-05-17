@@ -26,4 +26,7 @@
                 <a target="_blank" href="https://www.youtube.com/channel/UCCH1FRqjFuD3f9sUCZlL03g"><i class="fab fa-youtube-square"></i></a>
                 <a target="_blank" href="mailto:dortiz@brandingverticals.com"><i class="fas fa-envelope-square"></i></a>
             </div>
+            <div class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
         </header>
