@@ -22,7 +22,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 header.header {
   width: 100%;
   margin: 0 auto;
-  padding: 10px 0;
+  padding: 15px 0;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -30,19 +30,29 @@ header.header {
   background-color: #ffffff;
 }
 header.header .logo {
-  width: 25%;
+  width: 60%;
   padding-left: 15px;
   display: flex;
+}
+@media screen and (min-width: 1024px) {
+  header.header .logo {
+    width: 20%;
+  }
 }
 header.header .logo img {
   width: 325px;
   height: auto;
 }
 header.header .header-social {
-  width: 10%;
+  width: 20%;
   padding-right: 15px;
-  display: flex;
+  display: none;
   font-size: 30px;
+}
+@media screen and (min-width: 1024px) {
+  header.header .header-social {
+    display: flex;
+  }
 }
 header.header .header-social a {
   padding: 0 4px;
@@ -54,17 +64,24 @@ header.header .header-social a:hover {
   color: orange;
 }
 header.header .header-navigation {
-  width: 65%;
-  display: flex;
+  width: 60%;
+  padding-left: 15px;
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  header.header .header-navigation {
+    display: flex;
+  }
 }
 header.header ul {
+  min-width: 300px;
   display: flex;
   list-style: none;
   margin: 0 auto;
   padding: 0;
 }
 header.header .current-menu-item a {
-  color: #f1f1f1;
+  color: #ffffff;
   background-color: orange;
 }
 header.header li {
@@ -76,14 +93,14 @@ header.header li {
 header.header li ul {
   position: absolute;
   min-width: 325px;
-  top: 58px;
+  top: 48px;
   z-index: 999;
   display: none;
   margin: 0 auto;
   padding: 0;
 }
 header.header li:hover a {
-  color: #f1f1f1;
+  color: #ffffff;
   background-color: orange;
   transition: 0.5s;
 }
@@ -94,16 +111,27 @@ header.header li a {
   color: #000;
   display: block;
   margin: 0 auto;
-  padding: 17px;
+  padding: 12px;
   margin: 0 2px;
   text-transform: uppercase;
   text-decoration: none;
   transition: 0.5s;
 }
 header.header li a:hover {
-  color: #f1f1f1;
-  background-color: orange;
+  color: #ffffff;
+  background-color: #FBBB44;
   transition: 0.5s;
+}
+
+.mobile-toggle {
+  width: 20%;
+  display: flex;
+  font-size: 35px;
+}
+@media screen and (min-width: 1024px) {
+  .mobile-toggle {
+    display: none;
+  }
 }
 
 .footer {
